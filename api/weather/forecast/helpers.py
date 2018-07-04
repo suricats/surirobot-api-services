@@ -4,12 +4,12 @@ import json
 
 from api.exceptions import ExternalAPIException, InvalidCredentialsException, ResourceNotFoundException, BadParameterException
 
-with open(os.getcwd() + '/res/credentials/google.json', 'r') as file:
-    GOOGLE_NEWS_CREDENTIALS = json.load(file)
-token = GOOGLE_NEWS_CREDENTIALS['API_KEY']
+with open(os.getcwd() + '/res/credentials/forecast.json', 'r') as file:
+    FORECAST_CREDENTIALS = json.load(file)
+token = FORECAST_CREDENTIALS['API_KEY']
 
-def google_news_get_news(source='google-news-fr'):
-    res = requests.get('https://newsapi.org/v2/top-headlines', params={'sources': source, 'apiKey': token})
+def forecast_get_weather(source='google-news-fr'):
+    res = requests.get('https://api.darksky.net/forecast/' + token + '/37.8267,-122.4233')
     print(res.content)
     if res.status_code == 200:
         return res.json()
