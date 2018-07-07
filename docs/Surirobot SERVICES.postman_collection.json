@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "0f05c964-8bc9-4388-a728-8f10e586bbea",
+		"name": "Surirobot SERVICES",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "WEATHER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"latitude\": 12,\n  \"longitude\": 12,\n  \"time\": 1530731661,\n  \"language\":\"fr\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/weather/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"weather",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CRYPTOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/crypto/ethereum",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"crypto",
+						"ethereum"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NEWS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/news/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"news",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "1e628b36-4003-4637-8aae-f8a94c8666fc",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6311aa36-cdf0-450e-a71f-a4b4608b113a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "7dd0574e-f1c0-4490-a11e-ddfd080bac83",
+			"key": "url",
+			"value": "https://services.api.suricats-consulting.com",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "09394e99-6a51-4790-88d9-df0012565780",
+			"value": "http://localhost:5001",
+			"type": "string",
+			"description": ""
+		}
+	]
+}
