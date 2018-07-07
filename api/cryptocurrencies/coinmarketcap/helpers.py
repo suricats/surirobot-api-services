@@ -1,8 +1,7 @@
-import os
 import requests
-import json
 
-from api.exceptions import ExternalAPIException, InvalidCredentialsException, OperationFailedException, ResourceNotFoundException
+from api.exceptions import ExternalAPIException, ResourceNotFoundException
+
 
 def coinmarketcap_get_currency(currency, device='EUR'):
     print(currency)

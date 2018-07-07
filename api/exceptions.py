@@ -72,6 +72,8 @@ class OperationFailedException(APIException):
 
 
 class MissingParameterException(APIException):
+    status_code = 400
+
     def __init__(self, parameter):
         super().__init__(
             'missing_parameter',
@@ -80,6 +82,8 @@ class MissingParameterException(APIException):
 
 
 class ResourceNotFoundException(APIException):
+    status_code = 404
+
     def __init__(self, parameter):
         super().__init__(
             'resource_not_found',
@@ -88,6 +92,8 @@ class ResourceNotFoundException(APIException):
 
 
 class BadParameterException(APIException):
+    status_code = 400
+
     def __init__(self, parameter, valid_values=None):
         msg = '{} is not correct.'.format(parameter)
         if valid_values:
