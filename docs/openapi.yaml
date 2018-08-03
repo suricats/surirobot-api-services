@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: API Services
-  version: v1
+  version: v1.1
   description: This API provides all the necessary endpoints to give access to specific informations to Surirobot.
 servers:
   - url: 'https://services.api.suricats-consulting.com/api'
@@ -193,26 +193,52 @@ components:
         - summary
         - temperature
       properties:
-        apparentTemperature:
-          type: number
-          format: float
-        cloudCover:
-          type: number
-          format: float
-        humidity:
-          type: number
-          format: float
-        precipIntensity:
-          type: number
-          format: float
-        precipProbability:
-          type: number
-          format: float
-        summary:
-          type: string
-        temperature:
-          type: number
-          format: float
+        currently:
+          type: object
+          properties:
+            apparentTemperature:
+              type: number
+              format: float
+            cloudCover:
+              type: number
+              format: float
+            humidity:
+              type: number
+              format: float
+            precipIntensity:
+              type: number
+              format: float
+            precipProbability:
+              type: number
+              format: float
+            summary:
+              type: string
+            temperature:
+              type: number
+              format: float
+        daily:
+          type: object
+          properties:
+            apparentTemperature:
+              type: number
+              format: float
+            cloudCover:
+              type: number
+              format: float
+            humidity:
+              type: number
+              format: float
+            precipIntensity:
+              type: number
+              format: float
+            precipProbability:
+              type: number
+              format: float
+            summary:
+              type: string
+            temperature:
+              type: number
+              format: float
     CryptoCMGResponse:
       required:
         - evolution
