@@ -37,13 +37,9 @@ def weather():
         try:
             res = forecast_get_weather(latitude, longitude, time, language)
             output = {
-                "apparentTemperature": res["currently"]["apparentTemperature"],
-                "cloudCover": res["currently"]["cloudCover"],
-                "humidity": res["currently"]["humidity"],
-                "precipIntensity": res["currently"]["precipIntensity"],
-                "precipProbability": res["currently"]["precipProbability"],
-                "summary": res["currently"]["summary"],
-                "temperature": res["currently"]["temperature"]
+                "currently": res["currently"],
+                "daily": res["daily"]["data"][0],
+                "timezone": res["timezone"]
             }
             return jsonify(output), 200
         except InvalidCredentialsException as e:
