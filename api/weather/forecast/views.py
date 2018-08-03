@@ -38,7 +38,8 @@ def weather():
             res = forecast_get_weather(latitude, longitude, time, language)
             output = {
                 "currently": res["currently"],
-                "daily": res["daily"]["data"][0]
+                "daily": res["daily"]["data"][0],
+                "timezone": res["timezone"]
             }
             return jsonify(output), 200
         except InvalidCredentialsException as e:
