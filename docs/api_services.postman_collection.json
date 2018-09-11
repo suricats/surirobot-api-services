@@ -1,0 +1,383 @@
+{
+	"info": {
+		"_postman_id": "0f05c964-8bc9-4388-a728-8f10e586bbea",
+		"name": "HAL-1 API Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "weather",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"latitude\": 12,\n  \"longitude\": 12,\n  \"time\": {{$timestamp}},\n  \"language\":\"fr\"\n}"
+				},
+				"url": {
+					"raw": "{{services_url}}/api/weather/",
+					"host": [
+						"{{services_url}}"
+					],
+					"path": [
+						"api",
+						"weather",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "weather",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"latitude\": 12,\n  \"longitude\": 12,\n  \"time\": 1536677001,\n  \"language\":\"fr\"\n}"
+						},
+						"url": {
+							"raw": "{{services_url}}/api/weather/",
+							"host": [
+								"{{services_url}}"
+							],
+							"path": [
+								"api",
+								"weather",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1390",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Sep 2018 14:43:27 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.14.0",
+							"name": "Server",
+							"description": "A name for the server"
+						}
+					],
+					"cookie": [],
+					"body": "{\"currently\":{\"apparentTemperature\":35.13,\"cloudCover\":0.88,\"dewPoint\":19.7,\"humidity\":0.46,\"icon\":\"partly-cloudy-day\",\"ozone\":279.68,\"precipIntensity\":0,\"precipProbability\":0,\"pressure\":1009.27,\"summary\":\"Nuageux\",\"temperature\":33.01,\"time\":1536677001,\"uvIndex\":3,\"visibility\":16.09,\"windBearing\":5,\"windGust\":1.58,\"windSpeed\":1.51},\"daily\":{\"apparentTemperatureHigh\":35.39,\"apparentTemperatureHighTime\":1536674400,\"apparentTemperatureLow\":22.57,\"apparentTemperatureLowTime\":1536728400,\"apparentTemperatureMax\":35.39,\"apparentTemperatureMaxTime\":1536674400,\"apparentTemperatureMin\":20.84,\"apparentTemperatureMinTime\":1536638400,\"cloudCover\":0.84,\"dewPoint\":19.72,\"humidity\":0.69,\"icon\":\"partly-cloudy-day\",\"moonPhase\":0.07,\"ozone\":280.57,\"precipIntensity\":0.0152,\"precipIntensityMax\":0.1499,\"precipIntensityMaxTime\":1536656400,\"precipProbability\":0.09,\"precipType\":\"rain\",\"pressure\":1011.8,\"summary\":\"Nuageux durant toute la journ\\u00e9e.\",\"sunriseTime\":1536642171,\"sunsetTime\":1536686239,\"temperatureHigh\":33.06,\"temperatureHighTime\":1536674400,\"temperatureLow\":22.24,\"temperatureLowTime\":1536728400,\"temperatureMax\":33.06,\"temperatureMaxTime\":1536674400,\"temperatureMin\":20.32,\"temperatureMinTime\":1536642000,\"time\":1536620400,\"uvIndex\":8,\"uvIndexTime\":1536663600,\"visibility\":16.09,\"windBearing\":232,\"windGust\":5.24,\"windGustTime\":1536620400,\"windSpeed\":0.8},\"timezone\":\"Africa/Lagos\"}\n"
+				}
+			]
+		},
+		{
+			"name": "cryptos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/crypto/{{crypto}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"crypto",
+						"{{crypto}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "cryptos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/api/crypto/ethereum",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"crypto",
+								"ethereum"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Sep 2018 14:44:13 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.14.0",
+							"name": "Server",
+							"description": "A name for the server"
+						}
+					],
+					"cookie": [],
+					"body": "{\"evolution\":-2.83,\"value\":164.101076052}\n"
+				}
+			]
+		},
+		{
+			"name": "news",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/news/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"news",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "news",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/api/news/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"news",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "322",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Sep 2018 14:44:47 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.14.0",
+							"name": "Server",
+							"description": "A name for the server"
+						}
+					],
+					"cookie": [],
+					"body": "{\"message\":\"Apr\\u00e8s l\\u2019affaire Benalla, Macron r\\u00e9organise l\\u2019Elys\\u00e9e : Le chef de l\\u2019Etat va nommer un directeur g\\u00e9n\\u00e9ral des services pour chapeauter les 822\\u00a0salari\\u00e9s de la pr\\u00e9sidence. Un cabinet de conseil a \\u00e9galement audit\\u00e9 le fonctionnement du Ch\\u00e2teau.\"}\n"
+				}
+			]
+		},
+		{
+			"name": "news with precision",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/news/liberation",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"news",
+						"liberation"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "news with precision",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/api/news/liberation",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"news",
+								"liberation"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "339",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Sep 2018 14:45:05 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.14.0",
+							"name": "Server",
+							"description": "A name for the server"
+						}
+					],
+					"cookie": [],
+					"body": "{\"message\":\"L'instabilit\\u00e9 climatique contribue \\u00e0 aggraver la faim dans le monde : En 2017, 821 millions de personnes dans le monde \\u00e9taient en situation de manque chronique de nourriture contre 804 millions en 2016, soit une personne sur neuf sur la plan\\u00e8te, selon un rapport rendu par cinq agences des Nations Unies.\"}\n"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "1e628b36-4003-4637-8aae-f8a94c8666fc",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6311aa36-cdf0-450e-a71f-a4b4608b113a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "351688ed-fe6c-4525-92b9-ba972a8289b8",
+			"key": "url",
+			"value": "https://services.api.suricats-consulting.com",
+			"type": "string"
+		},
+		{
+			"id": "225d85c9-a30f-4ab8-a6c3-38c8bf03ed8f",
+			"value": "http://localhost:5001",
+			"type": "string"
+		},
+		{
+			"id": "a7ff8830-958d-4365-be1a-76624c74ab03",
+			"value": "https://services.api.suricats-consulting.com",
+			"type": "string"
+		}
+	]
+}
