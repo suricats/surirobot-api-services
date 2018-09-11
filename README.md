@@ -16,7 +16,7 @@ This API provides all the necessary endpoints to give access to specific informa
 ## Requirements
 * Python3 
 * Virtualenvwrapper ```pip install virtualenvwrapper```
-If you have trouble with the command ```workon``` see : https://stackoverflow.com/questions/29900090/virtualenv-workon-doesnt-work
+* If you have some trouble with the command ```workon``` see : https://stackoverflow.com/questions/29900090/virtualenv-workon-doesnt-work
 
 ## Installation
 
