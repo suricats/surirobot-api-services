@@ -3,3 +3,4 @@ flask-swagger-ui==3.6.0
 python-dotenv==0.8.2
 requests==2.18.4
 gunicorn==19.8.1
+pytest
