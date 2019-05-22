@@ -1,5 +1,7 @@
 # API Services
 
+[![PyPI - Python Version](https://img.shields.io/badge/python-3.6-blue.svg)](https://docs.python.org/3/whatsnew/3.6.html)
+
 This API provides all the necessary endpoints to give access to specific informations to Surirobot.
 
 ## Features
@@ -49,6 +51,9 @@ cp .env.example .env
 
 * Option 2 (suri-downloader) -  Fill the login & password fields in env and do:
 ```shell
+# Use export commands only if those inputs are not fulfilled in .env file
+export $REMOTE_DATA_LOGIN=<value>
+export $REMOTE_DATA_PASSWD=<value>
 tools/get-credentials
 ```
 
